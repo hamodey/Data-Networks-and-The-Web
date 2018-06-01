@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Headlines</title>
+	</head>
+<body>
+	<h1>Headlines</h1>
+	
+	{% for article in articles %}
+		{% if word in article.summary.lower() %}
+			<b>{{article.title}}</b><br />
+			<i>{{article.published}}</i><br />
+			<p>{{article.summary}}</p>
+			<hr />
+		{% endif %}
+	{% endfor %}
+</body>
+</html>
