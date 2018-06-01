@@ -14,34 +14,3 @@ The API it self is a order-user forms allowing users to place orders onto their 
 ## Users and Admin
 
 Please use user **ahmed@ahmed.com** with password **password** to log into admin account. This allow you to access the API with full access! Orders and users page only allow log ins required or else it will throw a 401 error, of unauthorized access. 
-
-## References to the FULL project 
-
-*all references were used throughout the project 
-
--- Labs: 
-
-[All labs] (http://gitlab.doc.gold.ac.uk/data-networks-web/lab-exercises/tree/master) 
-
--- Videos: 
-
-[Intro to Flask-Login] (https://www.youtube.com/watch?v=2dEM-s3mRLE)
-
-[Intro to Flask-Bootstrap] (https://www.youtube.com/watch?v=PE9ZGniSDW8)
-
-[Using Flask-WTForms] (https://www.youtube.com/watch?v=S7ZLiUabaEo)
-
-[Creating a RESTFul API in Flask] (https://www.youtube.com/watch?v=WxGBoY5iNXY)
-
-[Build a User Login System With Flask-Login] (https://www.youtube.com/watch?v=8aTnmsDMldY)
-
-
--- Online articles & StackOverflow:
-
-[Flask Documentation Multiple instances] (https://flask-login.readthedocs.io/en/latest/)
-
-[Get current user id] (https://stackoverflow.com/questions/41093661/get-current-user-id-in-flask?rq=1)
-
-[SQLAlchemy] (https://stackoverflow.com/questions/6699360/flask-sqlalchemy-update-a-rows-information)
-
- 
