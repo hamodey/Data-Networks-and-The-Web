@@ -1,0 +1,71 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Orders
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='signin.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='bootstrap.css')}}">
+
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ahmed's App</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                        <li><a href="{{ url_for('show_orders') }}">All Orders</a></li>
+            <li><a href="{{ url_for('dashboard') }}">All Users</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+          
+</ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="container">
+<h1>List of all Orders</h1>
+<h3><a href="{{ url_for('add_order') }}">Add an order</a></h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Text</th>
+      <th scope="col">User ID</th>
+      <th scope="col">User Full name</th>
+  
+  </tr>
+  </thead>
+<tbody>
+
+{% for orders in form %}
+<tr>
+<th scope="row">{{orders.orderID}}</th>
+<th scope="row">{{orders.text}}</th>
+<th scope="row">{{orders.userID}}</th>
+<th scope="row">{{orders.username}}</th>
+<th scope="row"><a href="/delete_order/{{orders.orderID}}">Delete Order</a></th>
+<th scope="row"><a href="/edit_order/{{orders.orderID}}">Edit Order</a></th>
+
+</tr>
+{% endfor %}
+
+
+</tbody>
+</div> <!-- /container -->
+{% endblock %}
