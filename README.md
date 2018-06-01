@@ -11,6 +11,3 @@ Start by signing up to the API then login to the API to be rediredcted to dashbo
 
 The API it self is a order-user forms allowing users to place orders onto their account with a specific order. This will allow 2 tables to access a foreign key of User ID and show which user places which order, also showing the name and User ID. 
 
-## Users and Admin
-
-Please use user **ahmed@ahmed.com** with password **password** to log into admin account. This allow you to access the API with full access! Orders and users page only allow log ins required or else it will throw a 401 error, of unauthorized access. 
